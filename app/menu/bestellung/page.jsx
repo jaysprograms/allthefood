@@ -7,8 +7,9 @@ export default function Bestellung() {
 	const [cart, setCart] = useState([]);
 	const [totalPrice, setTotalPrice] = useState(0);
 	const [zahlen, setZahlen] = useState(false);
+	const [isReduced, setIsReduced] = useState(false);
 
-	if (isTimeBetween()) {
+	if (isTimeBetween() && !isReduced) {
 		menu.forEach((item) => {
 			item.dishes.forEach((dish) => {
 				if (dish.category === "Hauptgericht") {
@@ -17,6 +18,7 @@ export default function Bestellung() {
 				}
 			});
 		});
+		setIsReduced(true)
 	}
 
 	const addToCart = (dish) => {
