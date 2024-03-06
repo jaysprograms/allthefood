@@ -16,7 +16,7 @@ export default function MenuSelector({menu}) {
 						key={item.country}
 						onClick={() => handleCountryChange(item.country)}
 						className={`mx-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 font-bold rounded-full ${
-							selectedCountry === item.country ? 'bg-blue-500 text-black' : 'bg-white text-white'
+							selectedCountry === item.country ? 'text-black' : 'text-white'
 						}`}
 					>
 						{item.country}
