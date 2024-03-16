@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+.header-img {
+    background-image: url("./components/wavesOpacity.svg");
+}
+
+.footer-img {
+    background-image: url("./components/waves.svg");
+}
+

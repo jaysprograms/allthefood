@@ -9,7 +9,7 @@ export default function MenuSelector({menu}) {
 	const selectedCountryMenu = menu.find(item => item.country === selectedCountry);
 
 	return (
-		<div className="bg-amber-50 ">
+		<div className="bg-white ">
 			<div className="flex flex-col md:flex-row justify-center">
 				{menu.map((item) => (
 					<button

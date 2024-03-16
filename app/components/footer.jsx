@@ -1,13 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import icon from "../icon.png";
-import waves from "./waves.svg";
 
 export default function Footer() {
 	return (
-		<footer className="bg-cyan-700 bg-cover p-4 flex items-center justify-center">
-			<Image src={waves} alt="kein plan"/>
-			<div className="flex items-center justify-between">
+		<footer className="bg-cyan-700 footer-img bg-cover p-4 flex items-center justify-center">
+			<div className=" flex items-center justify-between">
 				<div className="flex items-center justify-center">
 					<Link href="/" className="text-cyan-950 text-lg font-bold flex items-center justify-between">
 						<Image src={icon} alt="Footer Icon" className="w-10"/>

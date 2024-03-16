@@ -1,40 +1,21 @@
-import Navbar from "@/app/components/navbar";
-import Footer from "@/app/components/footer";
+'use client'
+import {useState} from "react";
+import {useRouter} from "next/navigation";
 
-export default function Bezahlung() {
-	const handleSubmit = (event) => {
+export default function PayFormular() {
+	const router = useRouter()
+
+	function handleAction(event) {
 		event.preventDefault();
-
-		const areFormsValid = Array.from(document.querySelectorAll('form')).every((form) => {
-			return Array.from(form.elements).every((element) => {
-				if (element.required) {
-					return element.value.trim() !== ''; // Überprüfe, ob das erforderliche Feld nicht leer ist
-				}
-				return true; // Wenn es nicht erforderlich ist, betrachten wir es als gültig
-			});
-		});
-
-		if (!areFormsValid) {
-			alert('Bitte füllen Sie alle erforderlichen Felder aus.');
-			return; // Abbrechen, wenn nicht alle erforderlichen Felder ausgefüllt sind
-		}
-
-		const formDataArray = Array.from(document.querySelectorAll('form')).map((form) => {
-			const formData = new FormData(form);
-			const data = {};
-			formData.forEach((value, key) => {
-				data[key] = value;
-			});
-			return data;
-		});
-
-		console.log('Gesammelte Formulardaten:', formDataArray);
-
+		const formData = event.target
+		console.log('Gesammelte Formulardaten:', formData);
+		router.push('/bestellung/bezahlung/erfolgreich');
 	}
+
 	return (
 		<div className="row-start-1 row-span-4 col-start-1 border border-black rounded mb-4 mx-4 p-8">
 			<h2 className="font-bold mb-2 text-2xl">Lieferadresse</h2>
-			<form>
+			<form id="contract" onSubmit={handleAction}>
 				<div className="flex flex-col xl:flex-row">
 					<div className="flex flex-col mx-4 w-full">
 						<label htmlFor="street">Straße</label>
@@ -53,9 +34,7 @@ export default function Bezahlung() {
 					<label htmlFor="firma">Firma (optional)</label>
 					<input className="border rounded-xl p-2" type="text" id="firma" name="firma"/>
 				</div>
-			</form>
-			<h2 className="font-bold mb-2 text-2xl mt-3">Persönliche Daten</h2>
-			<form>
+				<h2 className="font-bold mb-2 text-2xl mt-3">Persönliche Daten</h2>
 				<div className="flex flex-col xl:flex-row">
 					<div className="flex flex-col mx-4 w-full">
 						<label htmlFor="name">Vor- und Nachname</label>
@@ -63,16 +42,14 @@ export default function Bezahlung() {
 					</div>
 					<div className="flex flex-col mx-4 w-full">
 						<label htmlFor="email">E-Mail</label>
-						<input className="border rounded-xl p-2" type="email" id="email" name="email"/>
+						<input className="border rounded-xl p-2" type="email" id="email" name="email" required/>
 					</div>
 				</div>
 				<div className="flex flex-col mx-4">
 					<label htmlFor="telefon">Telefon</label>
 					<input className="border rounded-xl p-2" type="tel" id="telefon" name="telefon" required/>
 				</div>
-			</form>
-			<h2 className="font-bold mb-2 text-2xl mt-3">Zahlungsdaten</h2>
-			<form>
+				<h2 className="font-bold mb-2 text-2xl mt-3">Zahlungsdaten</h2>
 				<div className="flex flex-col mx-4">
 					<label htmlFor="kreditkarte">Kreditkartennummer</label>
 					<input className="border rounded-xl p-2" type="text" id="kreditkarte" name="kreditkarte" required/>
@@ -87,18 +64,19 @@ export default function Bezahlung() {
 				</div>
 				<div className="flex flex-col mx-4">
 					<label htmlFor="zahlungsart">Zahlungsart</label>
-					<select className="border rounded-xl p-2" id="zahlungsart" name="zahlungsart" required>
+					<select className="border rounded-xl p-2" id="zahlungsart" name="zahlungsart">
 						<option value="visa">Visa</option>
 						<option value="mastercard">Mastercard</option>
 					</select>
 				</div>
 				<div className="flex flex-col mt-6">
-					<button className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 p-4 font-bold text-2xl mx-auto rounded-full text-white" type="submit" onClick={handleSubmit}>
+					<button
+						className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 p-4 font-bold text-2xl mx-auto rounded-full text-white"
+						type="submit">
 						Bestellen und bezahlen
 					</button>
 				</div>
 			</form>
 		</div>
-
 	)
 }

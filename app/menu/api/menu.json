@@ -446,5 +446,135 @@
         "category": "Hauptgericht"
       }
     ]
+  },
+  {
+    "country": "Nicht-alkoholische Getränke",
+    "dishes": [
+      {
+        "id": 61,
+        "name": "Wasser",
+        "description": "Klares, nicht gesüßtes Wasser",
+        "price": "1€"
+      },
+      {
+        "id": 62,
+        "name": "Fruchtsaft",
+        "description": "Frisch gepresster Saft aus verschiedenen Früchten",
+        "price": "3€"
+      },
+      {
+        "id": 63,
+        "name": "Eistee",
+        "description": "Tee, der gekühlt und mit Eis serviert wird, oft gesüßt",
+        "price": "2.50€"
+      },
+      {
+        "id": 64,
+        "name": "Limonade",
+        "description": "Spritziges Erfrischungsgetränk mit Zitrusgeschmack",
+        "price": "2€"
+      },
+      {
+        "id": 65,
+        "name": "Mineralwasser mit Zitrone",
+        "description": "Natürliches Wasser mit einem Spritzer Zitronensaft",
+        "price": "2.50€"
+      },
+      {
+        "id": 66,
+        "name": "Ingwerbier",
+        "description": "Erfrischendes Getränk mit Ingwergeschmack",
+        "price": "3€"
+      },
+      {
+        "id": 67,
+        "name": "Cranberry-Saft",
+        "description": "Saft aus Cranberries, leicht herb und erfrischend",
+        "price": "3.50€"
+      },
+      {
+        "id": 68,
+        "name": "Tomatensaft",
+        "description": "Saft aus reifen Tomaten, oft gewürzt",
+        "price": "2.50€"
+      },
+      {
+        "id": 69,
+        "name": "Apfelschorle",
+        "description": "Mischung aus Apfelsaft und Mineralwasser",
+        "price": "2.50€"
+      },
+      {
+        "id": 70,
+        "name": "Milchshake",
+        "description": "Cremiges Getränk aus Milch und Fruchtpüree",
+        "price": "4€"
+      }
+    ]
+  },
+  {
+    "country": "Alkoholische Getränke",
+    "dishes": [
+      {
+        "id": 71,
+        "name": "Martini",
+        "description": "Cocktail aus Gin und trockenem Wermut, oft mit einer Olive garniert",
+        "price": "8€"
+      },
+      {
+        "id": 72,
+        "name": "Margarita",
+        "description": "Cocktail aus Tequila, Cointreau und Limettensaft, oft mit Salz am Glasrand",
+        "price": "9€"
+      },
+      {
+        "id": 73,
+        "name": "Old Fashioned",
+        "description": "Cocktail aus Bourbon, Zucker, Angostura-Bitter und einer Orangenzeste",
+        "price": "10€"
+      },
+      {
+        "id": 74,
+        "name": "Negroni",
+        "description": "Cocktail aus Gin, Wermut und Campari, oft mit einer Orangenzeste",
+        "price": "11€"
+      },
+      {
+        "id": 75,
+        "name": "Moscow Mule",
+        "description": "Cocktail aus Wodka, Ingwerbier und Limettensaft, oft im Kupferbecher serviert",
+        "price": "9€"
+      },
+      {
+        "id": 76,
+        "name": "Whiskey Sour",
+        "description": "Cocktail aus Bourbon, Zitronensaft und Zucker, oft mit Kirsche garniert",
+        "price": "10€"
+      },
+      {
+        "id": 77,
+        "name": "Piña Colada",
+        "description": "Cocktail mit Ananassaft, Kokosmilch und Rum, oft mit Ananas garniert",
+        "price": "8.50€"
+      },
+      {
+        "id": 78,
+        "name": "Mai Tai",
+        "description": "Cocktail aus Rum, Limettensaft, Orangenlikör und Mandelsirup",
+        "price": "12€"
+      },
+      {
+        "id": 79,
+        "name": "Gin Tonic",
+        "description": "Longdrink aus Gin und Tonic Water, oft mit Zitronenscheibe garniert",
+        "price": "7.50€"
+      },
+      {
+        "id": 80,
+        "name": "Aperol Spritz",
+        "description": "Aperitif-Cocktail aus Aperol, Prosecco und Sprudelwasser, oft mit Orangenscheibe garniert",
+        "price": "9.50€"
+      }
+    ]
   }
 ]

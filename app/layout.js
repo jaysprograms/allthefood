@@ -1,12 +1,12 @@
 import {Inter} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/navbar";
-import Head from "next/head";
 import Footer from "@/app/components/footer";
+import {Metadata} from "next";
 
 const inter = Inter({subsets: ["latin"]});
 
-export const metadata = {
+export const metadata= {
 	title: "AllTheFood",
 	description: "Das Restaurant für alle Geschmäcker",
 };
