@@ -44,7 +44,7 @@ export default function Reservierung() {
 				<h1 className="text-3xl font-bold m-6">Reservierung</h1>
 				<p className="text-2xl font-bold">Reservieren Sie jetzt Ihren Tisch!</p>
 				<p className="text-2xl font-bold">Telefon: 030 123456789</p>
-				<p className="text-2xl font-bold">Email: wasgehtsiedasan@thaddäus.com</p>
+				<p className="text-2xl font-bold">Email: reservierung@allthefood.de</p>
 				<p className="text-2xl font-bold">Oder mit folgendem Formular:</p>
 				<form>
 					<div className="flex flex-col mx-4">
