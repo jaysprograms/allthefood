@@ -1,8 +1,8 @@
-import OrderSelector from "@/app/bestellung/orderSelector";
-import {getMenu, isTimeBetween, reducePrice} from "@/app/components/functions/helper";
-import {addToCart, removeFromCart} from "@/app/bestellung/functions/functions";
+import MenuSale from "@/app/menu/menuSale";
+import {getMenu} from "@/app/components/functions/helper";
+import Cart from "@/app/bestellung/Cart";
 
-export default async function Bestellung() {
+export default async function Order() {
 	let menu;
 	try {
 		menu = await getMenu();
@@ -12,8 +12,10 @@ export default async function Bestellung() {
 	}
 
 	return (
-		<OrderSelector menu={menu}/>
-	)
-}
-
-
+		<div className="flex-grow bg-white">
+			<div className="col-span-1 flex flex-col">
+				<Cart menu={menu}/>
+			</div>
+		</div>
+	);
+};

@@ -16,31 +16,7 @@ export default function Navbar() {
 					</Link>
 				</div>
 
-				{/* Dropdown-Menü für kleine Bildschirme */}
-
-					<div className="flex items-center sm:hidden">
-						<button className="text-black hover:text-gray-300 focus:outline-none">
-							&#9776; {/* Hamburger-Symbol */}
-						</button>
-						<div className="hidden absolute right-0 mt-2 bg-white rounded-md shadow-lg">
-							<div className="p-2">
-								<Link href="/menu" className="block text-black hover:text-gray-300 drop-shadow-lg">
-									Zum Menü
-								</Link>
-								<Link href="/bestellung" className="block text-black hover:text-gray-300 drop-shadow-lg">
-									Zur Bestellung
-								</Link>
-								<Link href="/standort" className="block text-black hover:text-gray-300 drop-shadow-lg">
-									Hier finden Sie uns
-								</Link>
-								<Link href="/reservierung" className="block text-black hover:text-gray-300 drop-shadow-lg">
-									Tisch reservieren
-								</Link>
-							</div>
-						</div>
-					</div>
-
-					<div className="flex items-center space-x-4 flex-grow mx-8 max-sm:hidden">
+					<div className="flex items-center space-x-4 flex-grow mx-8">
 						<Link href="/menu" className="text-black hover:bg-gray-200 bg-white border p-2 rounded-md">
 							Zum Menü
 						</Link>
