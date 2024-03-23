@@ -7,15 +7,14 @@ export default function Navbar() {
 
 
 	return (
-		<header className="bg-white header-img bg-cover p-4">
-			<nav className="flex items-center justify-between">
+		<header className="bg-white">
+			<nav className="bg-cyan-700 flex items-center justify-between p-4">
 				<div className="flex items-center justify-center">
 					<Link href="/" className="text-cyan-950 text-lg font-bold flex items-center justify-between">
 						<Image src={icon} alt="AllTheFood Icon" className="w-10"/>
 						AllTheFood
 					</Link>
 				</div>
-
 					<div className="flex items-center space-x-4 flex-grow mx-8">
 						<Link href="/menu" className="text-black hover:bg-gray-200 bg-white border p-2 rounded-md">
 							Zum Menü
@@ -27,14 +26,14 @@ export default function Navbar() {
 							Hier finden Sie uns
 						</Link>
 					</div>
-
-
 				<div className="flex items-center space-x-4 mx-4">
 					<Link href="/reservierung" className="bg-white text-cyan-950 px-4 py-2 border rounded-md hover:bg-gray-200">
 						Tisch reservieren
 					</Link>
 				</div>
 			</nav>
+			<div className="bg-white header-img h-10 w-full">
+			</div>
 		</header>
 	);
 }

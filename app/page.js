@@ -25,8 +25,8 @@ export default function Home() {
 					</div>
 				</div>
 				<div className="xl:col-span-1 flex flex-col justify-center items-center pt-20">
-					<Image src={breakfast} alt="Frühstücksbuffet" className="xl:w-1/2 rounded-xl m-4 shadow-xl"/>
-					<Image src={asian} alt="Asiatisches Essen" className="xl:w-1/2 rounded-xl m-4 shadow-xl"/>
+					<Image src={breakfast} alt="Frühstücksbuffet" className="xl:w-1/2 rounded-xl m-4"/>
+					<Image src={asian} alt="Asiatisches Essen" className="xl:w-1/2 rounded-xl m-4 right-0"/>
 				</div>
 			</div>
 		</div>

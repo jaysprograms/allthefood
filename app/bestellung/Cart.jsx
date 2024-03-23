@@ -69,7 +69,7 @@ export default function Cart({menu}) {
 					</div>
 				</div>
 			</div>
-			<div className="sticky flex flex-col top-4 col-start-2 col-span-1 items-center">
+			<div className="sticky flex flex-col top-4 col-start-2 col-span-1 items-center h-fit">
 				<h2 className="font-bold mb-2 text-2xl">Warenkorb</h2>
 				<div className="flex flex-col items-center p-4 overflow-y-auto max-h-[50vh]">
 					<ul>

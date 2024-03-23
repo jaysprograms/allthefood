@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react';
+import Link from "next/link";
 
 export default function Reservierung() {
 	const [minDate, setMinDate] = useState('');
@@ -42,18 +43,21 @@ export default function Reservierung() {
 		<div className="flex-grow bg-white">
 			<div className="flex flex-col items-center justify-center">
 				<h1 className="text-3xl font-bold m-6">Reservierung</h1>
-				<p className="text-2xl font-bold">Reservieren Sie jetzt Ihren Tisch!</p>
+				<p className="text-2xl font-bold">Reserviere Dir jetzt einen Tisch!</p>
 				<p className="text-2xl font-bold">Telefon: 030 123456789</p>
-				<p className="text-2xl font-bold">Email: reservierung@allthefood.de</p>
+				<p className="text-2xl font-bold">Email:&nbsp;
+					<Link href="mailto:reservierung@allthefood.de" className="text-blue-500 hover:text-blue-700">reservierung@allthefood.de</Link></p>
 				<p className="text-2xl font-bold">Oder mit folgendem Formular:</p>
 				<form>
 					<div className="flex flex-col mx-4">
 						<label htmlFor="name">Name</label>
-						<input className="border rounded-xl p-2" type="text" id="name" name="name" required/>
+						<input className="border rounded-xl p-2" type="text" id="name" name="name"
+									 placeholder="Vor- und Nachname" required/>
 					</div>
 					<div className="flex flex-col mx-4">
 						<label htmlFor="count">Anzahl</label>
-						<input className="border rounded-xl p-2" type="number" id="count" name="count" required/>
+						<input className="border rounded-xl p-2" type="number" id="count" name="count"
+									 min="1" max="12" defaultValue="1" required/>
 					</div>
 					<div className="flex flex-col mx-4">
 						<label htmlFor="date">Datum</label>
@@ -63,11 +67,11 @@ export default function Reservierung() {
 					<div className="flex flex-col mx-4">
 						<label htmlFor="time">Uhrzeit</label>
 						<input className="border rounded-xl p-2" type="time" id="time" name="time"
-									 min={minTime} step="900" value="14:00" required/>
+									 min={minTime} step="900" required/>
 					</div>
 					<div className="flex flex-col mt-6">
 						<button
-							className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 p-4 font-bold text-2xl mx-auto rounded-full text-white"
+							className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 p-4 font-bold text-2xl mx-auto mb-4 rounded-full text-white"
 							type="submit" onClick={() => console.log("submitted")}>
 							Reservieren
 						</button>

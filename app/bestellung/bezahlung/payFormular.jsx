@@ -1,9 +1,26 @@
 'use client'
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import {useRouter} from "next/navigation";
 
 export default function PayFormular() {
 	const router = useRouter()
+
+	const [minDate, setMinDate] = useState('');
+
+	useEffect(() => {
+		// Funktion, um das Min-Datum zu setzen
+		const setMinDateToday = () => {
+			const today = new Date();
+			const day = today.getDate();
+			const month = today.getMonth() + 1; // Januar ist 0!
+			const year = today.getFullYear();
+
+			const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+			setMinDate(formattedDate);
+		};
+
+		setMinDateToday();
+	}, []);
 
 	function handleAction(event) {
 		event.preventDefault();
@@ -60,7 +77,8 @@ export default function PayFormular() {
 				</div>
 				<div className="flex flex-col mx-4">
 					<label htmlFor="ablaufdatum">Ablaufdatum</label>
-					<input className="border rounded-xl p-2" type="date" id="ablaufdatum" name="ablaufdatum" required/>
+					<input className="border rounded-xl p-2" type="date" id="ablaufdatum" name="ablaufdatum"
+								 min={minDate} max="2025-12-31" required/>
 				</div>
 				<div className="flex flex-col mx-4">
 					<label htmlFor="zahlungsart">Zahlungsart</label>

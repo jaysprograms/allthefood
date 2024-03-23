@@ -12,7 +12,7 @@ export default async function Menu() {
 
 	return (
 		<div className="flex-grow flex flex-col bg-white">
-			<div className="xl:absolute bottom-10 right-20 m-auto mb-4">
+			<div className="xl:absolute bottom-0 right-20 m-auto mb-4">
 				<MenuSale/>
 			</div>
 			<div className="flex justify-center m-auto">
