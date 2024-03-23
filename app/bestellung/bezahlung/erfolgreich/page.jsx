@@ -24,7 +24,7 @@ export default function Erfolgreich() {
 			<div className="col-span-1 flex flex-col items-center justify-center text-center font-bold">
 				<h1 className="text-3xl">Vielen Dank für Deine Bestellung!</h1>
 				<h2 className="text-2xl">Wir haben Deine Bestellung erhalten und werden diese umgehend bearbeiten.</h2>
-				<p className="">Wir wünschen einen guten Appetit und freuen uns auf Deinen nächsten Besuch oder Deine nächste Bestellung!</p>
+				<p className="">Wir wünschen einen guten Appetit und freuen uns auf Deinen nächsten Besuch <br/> oder Deine nächste Bestellung!</p>
 			</div>
 			<div className="col-span-1 flex flex-col items-center justify-center">
 				<h2 className="font-bold mb-2 text-2xl">Deine Bestellung</h2>
