@@ -6,7 +6,7 @@ export default function Kontakt() {
 	const router = useRouter()
 	function handleSubmit(event) {
 		event.preventDefault()
-		alert('Vielen Dank für Ihre Nachricht! Wir werden diese umgehend lesen.');
+		alert('Vielen Dank für Deine Nachricht! Wir werden diese umgehend lesen.');
 		router.push('/');
 	}
 
@@ -29,8 +29,8 @@ export default function Kontakt() {
 						<input className="border rounded-xl p-2" type="email" id="email" name="email" required/>
 					</div>
 					<div className="flex flex-col mx-4">
-						<label htmlFor="message">Ihre Nachricht</label>
-						<textarea className="border rounded-xl p-2 h-96" id="message" name="message" required/>
+						<label htmlFor="message">Deine Nachricht</label>
+						<textarea className="border rounded-xl p-2 h-60" id="message" name="message" required/>
 					</div>
 					<div className="flex flex-col mt-6">
 						<button

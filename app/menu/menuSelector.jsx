@@ -10,12 +10,12 @@ export default function MenuSelector({menu}) {
 
 	return (
 		<div className="bg-white ">
-			<div className="flex flex-col md:flex-row justify-center">
+			<div className="flex flex-col md:flex-row flex-wrap justify-center">
 				{menu.map((item) => (
 					<button
 						key={item.country}
 						onClick={() => handleCountryChange(item.country)}
-						className={`mx-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 font-bold rounded-full ${
+						className={`mx-2 mt-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 active:bg-orange-700 font-bold rounded-full ${
 							selectedCountry === item.country ? 'text-black' : 'text-white'
 						}`}
 					>

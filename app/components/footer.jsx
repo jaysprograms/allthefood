@@ -12,7 +12,7 @@ export default function Footer() {
 						AllTheFood
 					</Link>
 				</div>
-				<div className="flex items-center space-x-4 flex-grow mx-8">
+				<div className="flex items-center space-x-4 flex-grow mx-8 font-bold">
 					<Link href="/impressum" className="text-white hover:text-gray-300">
 						Impressum
 					</Link>
