@@ -29,7 +29,7 @@ export default function Home() {
 					<Image src={breakfast} alt="Frühstücksbuffet" className="xl:w-1/3 rounded-xl m-4
 					transform transition-transform ease-in-out delay-0 duration-300
 					xl:absolute top-0 left-0 xl:hover:translate-x-1/2
-					xl:hover:scale-[2] xl:hover:translate-y-20 z-10
+					xl:hover:scale-[1.5] xl:hover:translate-y-20 z-10
 					shadow-2xl shadow-neutral-950"/>
 					<Image src={asian} alt="Asiatisches Essen" className="xl:w-1/3 rounded-xl m-4
 					transform transition-transform ease-in-out delay-0 duration-300
