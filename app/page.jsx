@@ -22,9 +22,11 @@ export default function Home() {
 							<span className="text-red-700">Herz&nbsp;</span>
 							begehrt.
 						</p>
-						<h2 className="text-3xl font-bold m-6">Öffnungszeiten</h2>
-						<p className="text-2xl font-bold">Dienstag - Sonntag</p>
+						<h2 className="text-3xl font-bold m-6 underline">Öffnungszeiten</h2>
+						<p className="text-2xl font-bold">Dienstag - Donnerstag</p>
 						<p className="text-2xl font-bold">14:00 - 22:00 Uhr</p>
+						<p className="text-2xl font-bold">Freitag - Sonntag</p>
+						<p className="text-2xl font-bold">14:00 - 00:00 Uhr</p>
 					</div>
 				</div>
 				<div className="xl:col-span-1 relative flex flex-col items-center">
