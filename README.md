@@ -1,10 +1,10 @@
 # Projekt "AllTheFood" 
 Folgendes Projekt ist Bestandteil des Moduls Webprogrammierung
 
-## Installation
+## Installation (Dev)
 
 Um das Projekt starten zu können, muss NodeJS installiert sein. <br>
-Im Projekt Ordner im Terminal folgendes ausführen: 
+Im Terminal ins Projektverzeichnis wechseln und folgendes ausführen: 
 ``` 
 > npm install
 # dann
@@ -13,6 +13,20 @@ Im Projekt Ordner im Terminal folgendes ausführen:
 
 Der Server läuft auf localhost:3000 <br>
 Und kann im Browser deiner Wahl geöffnet werden.
+
+## Installation (Prod)
+
+Um das Projekt starten zu können, muss NodeJS installiert sein. <br>
+Im Terminal ins Projektverzeichnis wechseln und folgendes ausführen: 
+``` 
+> next build
+# dann
+> next start
+```
+
+Der Server läuft auf localhost:3000 <br>
+Und kann im Browser deiner Wahl geöffnet werden.
+
 
 > Notiz: Die Webseite ist nur für große Desktops entwickelt worden!
 
