@@ -1,32 +1,35 @@
 'use client'
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import Link from "next/link";
+import {useRouter} from "next/navigation";
 
 export default function Reservierung() {
 	const [minDate, setMinDate] = useState('');
 	const [minTime, setMinTime] = useState('');
+
+	const router = useRouter();
 
 	useEffect(() => {
 		// Funktion, um das Min-Datum zu setzen
 		const setMinDateToday = () => {
 			const today = new Date();
 			const day = today.getDate();
-			const month = today.getMonth() + 1; // Januar ist 0!
+			const month = today.getMonth() + 1;
 			const year = today.getFullYear();
 
 			const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
 			setMinDate(formattedDate);
 		};
 
-		// Funktion, um das Min-Zeit zu setzen
+		// Funktion, um die Min-Zeit zu setzen
 		const setMinTimeForAfternoon = () => {
 			const today = new Date();
-			today.setHours(14, 0, 0, 0); // Setze die Zeit auf 14:00 Uhr
+			today.setHours(14, 0, 0, 0);
 
 			const hours = today.getHours();
 			const minutes = today.getMinutes();
 
-			const roundedMinutes = Math.ceil(minutes / 30) * 30; // Runde auf die nächste halbe Stunde
+			const roundedMinutes = Math.ceil(minutes / 30) * 30;
 
 			today.setMinutes(roundedMinutes);
 
@@ -34,21 +37,28 @@ export default function Reservierung() {
 			setMinTime(formattedTime);
 		};
 
-		// Setze das Min-Datum und Min-Zeit beim Laden der Seite
 		setMinDateToday();
 		setMinTimeForAfternoon();
 	}, []);
 
+	const onSubmit = (event) => {
+		event.preventDefault();
+		alert('Vielen Dank für Deine Reservierung! Wir freuen uns auf Deinen Besuch.');
+		router.push('/');
+	}
+
 	return (
 		<div className="flex-grow bg-white">
 			<div className="flex flex-col items-center justify-center">
-				<h1 className="text-3xl font-bold m-6">Reservierung</h1>
-				<p className="text-2xl font-bold">Reserviere Dir jetzt einen Tisch!</p>
-				<p className="text-2xl font-bold">Telefon: 030 123456789</p>
-				<p className="text-2xl font-bold">Email:&nbsp;
-					<Link href="mailto:reservierung@allthefood.de" className="text-blue-500 hover:text-blue-700">reservierung@allthefood.de</Link></p>
-				<p className="text-2xl font-bold">Oder mit folgendem Formular:</p>
-				<form>
+				<h1 className="text-5xl font-bold m-6">Reserviere Dir hier einen Tisch!</h1>
+				<div className="text-2xl mb-6">
+					<p><span className="font-bold">Telefon:</span> 030 123456789</p>
+					<p><span className="font-bold">Email:</span>&nbsp;
+						<Link href="mailto:reservierung@allthefood.de"
+									className="text-blue-500 hover:text-blue-700">reservierung@allthefood.de</Link></p>
+					<p className="mt-4">Oder mit dem Formular:</p>
+				</div>
+				<form className="font-bold" onSubmit={onSubmit}>
 					<div className="flex flex-col mx-4">
 						<label htmlFor="name">Name</label>
 						<input className="border rounded-xl p-2" type="text" id="name" name="name"

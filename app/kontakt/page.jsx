@@ -4,6 +4,7 @@ import Link from "next/link";
 
 export default function Kontakt() {
 	const router = useRouter()
+
 	function handleSubmit(event) {
 		event.preventDefault()
 		alert('Vielen Dank für Deine Nachricht! Wir werden diese umgehend lesen.');
@@ -12,12 +13,14 @@ export default function Kontakt() {
 
 	return (
 		<div className="flex-grow flex flex-col items-center justify-center bg-white font-bold">
-			<h1 className="text-3xl mb-8">Kontaktiere uns hier!</h1>
-			<p >Wir freuen uns über jede Nachricht!</p>
-			<p className="mb-4">
-				Alternativ auch gern über&nbsp;
-				<Link href="mailto:info@allthefood.de" className="text-blue-500 hover:text-blue-700">info@allthefood.de</Link>
-			</p>
+			<h1 className="text-5xl mb-8">Kontaktiere uns hier!</h1>
+			<div className="text-xl mb-4 text-center">
+				<p>Wir freuen uns über jede Nachricht!</p>
+				<p>
+					Alternativ auch gern über&nbsp;
+					<Link href="mailto:info@allthefood.de" className="text-blue-500 hover:text-blue-700">info@allthefood.de</Link>
+				</p>
+			</div>
 			<div className="">
 				<form onSubmit={handleSubmit}>
 					<div className="flex flex-col mx-4">

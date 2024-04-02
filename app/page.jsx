@@ -1,4 +1,3 @@
-import Link from "next/link"
 import Image from "next/image";
 import icon from "./icon.png"
 import breakfast from "@/public/pictures/food.jpg"
@@ -23,24 +22,24 @@ export default function Home() {
 							<span className="text-red-700">Herz&nbsp;</span>
 							begehrt.
 						</p>
+						<h2 className="text-3xl font-bold m-6">Öffnungszeiten</h2>
+						<p className="text-2xl font-bold">Dienstag - Sonntag</p>
+						<p className="text-2xl font-bold">14:00 - 22:00 Uhr</p>
 					</div>
 				</div>
 				<div className="xl:col-span-1 relative flex flex-col items-center">
 					<Image src={breakfast} alt="Frühstücksbuffet" className="xl:w-1/3 rounded-xl m-4
-					transform transition-transform ease-in-out delay-0 duration-300
-					xl:absolute top-0 left-0 xl:hover:translate-x-1/2
-					xl:hover:scale-[1.5] xl:hover:translate-y-20 z-10
-					shadow-2xl shadow-neutral-950"/>
+						transform transition-transform delay-0 duration-300
+						xl:hover:scale-[2.5] xl:hover:translate-y-1/2 xl:hover:z-50 z-10
+						shadow-2xl shadow-neutral-950"/>
 					<Image src={asian} alt="Asiatisches Essen" className="xl:w-1/3 rounded-xl m-4
-					transform transition-transform ease-in-out delay-0 duration-300
-					xl:absolute bottom-0 left-0
-					xl:hover:scale-[1.5] xl:hover:translate-x-20 xl:hover:-translate-y-1/2
-					shadow-2xl shadow-neutral-950"/>
+						transform transition-transform delay-0 duration-300
+						xl:hover:scale-[3] xl:hover:z-50 z-10
+						shadow-2xl shadow-neutral-950"/>
 					<Image src={table} alt="Gedeckter Tisch" className="xl:w-1/3 rounded-xl m-4
-					transform transition-transform ease-in-out delay-0 duration-300
-					xl:absolute bottom-0 right-0 xl:hover:-translate-x-1/2
-					xl:hover:scale-[1.5] xl:hover:-translate-y-20 z-10
-					shadow-2xl shadow-neutral-950"/>
+						transform transition-transform delay-0 duration-300
+						xl:hover:scale-[2.5] xl:hover:-translate-y-1/2 xl:hover:z-50 z-10
+						shadow-2xl shadow-neutral-950"/>
 				</div>
 			</div>
 		</div>

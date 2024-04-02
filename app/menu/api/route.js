@@ -1,7 +1,7 @@
 import fs from "fs";
 
 export async function GET(req, res) {
-
+	// Gebe das Menü zurück und reduziere den Preis um 2€ für Hauptgerichte zwischen 10 und 14 Uhr
 	try {
 		const menu = JSON.parse(fs.readFileSync("app/menu/api/menu.json", "utf8"));
 		if (isTimeBetween()) {
